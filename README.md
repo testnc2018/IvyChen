@@ -1,4 +1,4 @@
-# IvyChen
+# 資料科學學程上課心得
 Ivy says" Github's Hello World"
 
 ## 課程名稱
