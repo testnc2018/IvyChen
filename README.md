@@ -1,5 +1,5 @@
 # IvyChen
-Ivy says" Hello World"
+Ivy says" Github's Hello World"
 
 ##課程名稱
 Pecu的厲害課程。
