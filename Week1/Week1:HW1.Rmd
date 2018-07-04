@@ -1,0 +1,24 @@
+---
+title: "HW1"
+author: "ivy chen"
+date: "2018/7/4"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Week1
+
+* Morning  
+原訂要安裝 Github Client，但不太會用就用web帶過，不太確定在直接用Rstudio vin管理的情況下，還需要Github Glient嗎?
+
+* Afternoon  
+練習R markdown  
+增加 R markdown的時候，遇到error msg __rmarkdown 1.6 is required but 1.1 is avaialbe__  OS:Win10
+嘗試解決方式：  
+    + 將R studio版本更新到最新版 ＝>無效  
+    + 目前換到Mac 來操作=>解決  
+    
+新找到在markdown下，若要 sub-level bullet要兩個tab
