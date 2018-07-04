@@ -5,9 +5,9 @@ Ivy says" Github's Hello World"
 Pecu的厲害課程。
 
 ## 早上進度
-還可以...
+開github repo 還可以...
 
-Hi I am Ivy, 我來開開心心上課， 我已經畢業了 清華科管畢業 是個小廢柴..      
+Hi I am Ivy, 我來開開心心上課， 我已經畢業了 清華科管畢業..      
 
 
 這是我的試驗專案。
