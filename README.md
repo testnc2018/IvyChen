@@ -1,4 +1,5 @@
 # IvyChen
 Ivy says" Hello World"
 
-Hi I am Ivy, 這是我的試驗專案。
+課程名稱:Pecu的厲害課程。
+Hi I am Ivy, 我來開開心心上課， 這是我的試驗專案。
