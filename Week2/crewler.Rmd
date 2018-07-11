@@ -1,0 +1,23 @@
+---
+title: "Crewler"
+author: "ivy chen"
+date: "2018/7/11"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# 網路爬蟲
+```{r ,echo=FALSE}
+
+source('Week2/pttTestFunction.R')
+id= c(7250:7251)
+URL = paste0("https://www.ptt.cc/bbs/BabyMother/index", id, ".html")
+filename = paste0(id, ".txt")
+pttTestFunction(URL[1], filename[1])
+> mapply(pttTestFunction, 
++        URL = URL, filename = filename)
+
+```
