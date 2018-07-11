@@ -2,12 +2,14 @@
 Ivy says" Github's Hello World"
 
 ## 課程名稱
-Pecu的厲害課程_資料科學學程。
+資料科學學程。
 
-## 早上進度
-開github repo 還可以...
+## 作業範例  
 
-Hi I am Ivy, 我來開開心心上課， 我已經畢業了 清華科管畢業..      
+* WEEK1  
+[HW1](https://github.com/testnc2018/IvyChen/blob/master/Week1/Week1:HW1.Rmd)
 
+* WEEK2  
+[HW2_Part1]()  
+[HW2_Part2]()
 
-這是我的試驗專案。
