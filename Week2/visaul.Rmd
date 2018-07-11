@@ -1,0 +1,67 @@
+---
+title: "Visual"
+author: "ivy chen"
+date: "2018/7/10"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r readdata , echo=FALSE}
+library(ggplot2)
+library(lubridate)
+bike<-read.csv("../Regression_ Demand estimation - 506153734175476c4f62416c57734963.faa6ba63383c4086ba587abf26b85814.v1-default-1643 - Results dataset.csv")
+bikeT<-bike
+bikeT$dteday<-mdy_hms(bike$dteday)
+
+
+
+```
+
+
+#資料介紹
+本資料來自the Capital Bikeshare company，是一家在美國DC經營腳踏車租借，這是2011年及2012年每小時租借資料，希望了解各變數跟租借狀況的關係．  
+* 17,379 rows and 17 columns  
+* 溫度、濕度、風速 
+
+``` {r timevscnt , echo=FALSE }
+ggplot(data=bikeT,aes(x=dteday,y=cnt))+geom_line()
+#加上X時間座標軸
+```
+
+可以看出2011年的運量平均比2012年少，似乎月份彼此也有關聯性
+
+來看一下2011年及2012年的運量比較
+
+```{r cnt11vs12, echo=FALSE}
+ggplot(data = bikeT, aes(x=as.factor(yr),y=cnt))+geom_boxplot()
+```
+
+從圖上可知道，2011年(第0年)每小時的運量中位數在125台，但，到了2012年(第1年)每小時的運量中位數在175台，第二年整體營運變好
+
+```{r comparebymonthandyear, echo=FALSE}
+ggplot(data=bikeT,aes(as.factor(mnth),cnt))+geom_bar(stat = "identity")+facet_grid(as.factor(yr)~.)
+```
+
+從圖上可以看出每年的第一跟第二個月運量是最少的，夏天到十月以前運量都是多的．
+
+
+# 其他先跑但來不及分析的圖形
+
+```{r other plot}
+
+#單變數：類別型 holiday as factor
+ggplot(data=bike,aes(x=holiday)) + geom_bar(fill="lightblue",colours="black")
+
+#單變數：連續型 租借次數
+ggplot(data=bikeT,aes(x=cnt)) + geom_histogram()
+
+#雙變數：連續 vs 連續 
+ggplot(data=bike,aes(x=cnt,y=temp))+geom_point()
+
+
+#雙變數：離散 vs 連續 
+ggplot(bike,aes(x=as.factor(bike$weekday),y=cnt))+geom_boxplot()
+```
