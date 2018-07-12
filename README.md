@@ -10,6 +10,6 @@ Ivy says" Github's Hello World"
 [HW1](https://github.com/testnc2018/IvyChen/blob/master/Week1/Week1:HW1.Rmd)
 
 * WEEK2  
-[HW2_Part1]()  
-[HW2_Part2]()
+[HW2_Part1](https://testnc2018.github.io/summerclass/Week2/visaul.html)  
+[HW2_Part2](https://github.com/testnc2018/summerclass/blob/master/Week2/wordcloud.Rmd)
 
