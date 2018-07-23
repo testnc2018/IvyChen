@@ -29,7 +29,7 @@ note:Interface to apply transformation functions (also denoted as mappings) to c
 ```{R 文本整理 }
 filenames <- list.files(getwd(), pattern="*.txt")
 files <- lapply(filenames, readLines)
-docs <- Corpus(VectorSource(files))
+#docs <- Corpus(VectorSource(files))
 ```
 
 ## 問題2 要畫結巴切詞要用corpora的格式；文字雲格式需要是df;要做TFIDF格式需要是matrix
