@@ -140,18 +140,24 @@ $(document).ready(function () {
 <li>生成文字雲</li>
 </ol>
 </div>
-<div id="1-corpus-tm_mapfunction" class="section level2">
-<h2>問題1 用Corpus再轉一次是因為要使用 <code>tm_map</code>function`嗎?</h2>
-<p>前處理中的 <code>lapply(filenames, readLines)</code>把每篇文章都變成一個list，list裡面每一行文字，都變成一個向量． 透過Corpus funcation產生出list的list?(不確定是否能這樣理解?)第一層的list欄位包含content跟meta；第二層list為meta下包含七個list 例如 author…</p>
-<p>用Corpus再轉一次是因為要使用 <code>tm_map</code>function嗎? 因為我查這function看起來是只能用在<code>corpora</code>上(但不確定這代表什麼) note:Interface to apply transformation functions (also denoted as mappings) to corpora.</p>
+<div id="1-corpus-tm_map-function" class="section level2">
+<h2>問題1 用Corpus再轉一次是因為要使用 <code>tm_map</code> function嗎?</h2>
+<p>前處理中的 <code>lapply(filenames, readLines)</code>把每篇文章都變成一個list，list裡面每一行文字，都變成一個向量．<br />
+透過Corpus funcation產生出list的list?(不確定是否能這樣理解?)第一層的list欄位包含content跟meta；第二層list為meta下包含七個list 例如 author…</p>
+<p>用Corpus再轉一次是因為要使用 <code>tm_map</code>function嗎?<br />
+因為我查這function看起來是只能用在<code>corpora</code>上(但不確定這代表什麼)<br />
+note:Interface to apply transformation functions (also denoted as mappings) to corpora.</p>
 <pre class="r"><code>filenames &lt;- list.files(getwd(), pattern=&quot;*.txt&quot;)
 files &lt;- lapply(filenames, readLines)
 #docs &lt;- Corpus(VectorSource(files))</code></pre>
 </div>
-<div id="2-corporadftfidfmatrix" class="section level2">
-<h2>問題2 要畫結巴切詞要用corpora的格式；文字雲格式需要是df;要做TFIDF格式需要是matrix</h2>
+<div id="2-corpora-df-tfidfmatrix" class="section level2">
+<h2>問題2 要畫結巴切詞要用corpora的格式； 文字雲格式需要是df; TFIDF格式需要是matrix?</h2>
 <p>我在看助教的<a href="https://ntu-csx-datascience.github.io/106Summer/week3/tfidf/tfidf.html">code</a> 有點吃力，我猜是我對於文本前處理的格式跟文字雲、TFIDF的資料格式沒有讀懂．我嘗試一個一個function看內容．</p>
-<p>我的理解是 要結巴切詞資料需要是corpora格式 文字雲需要df,所以，在code上看到<code>as.data.fram</code> TFIDF吃matix，所以在助教的code上看到<code>as.matix</code></p>
+<p>我的理解是 要結巴切詞資料需要是corpora格式<br />
+文字雲需要df,所以，在code上看到<code>as.data.fram</code><br />
+TFIDF吃matix，所以在助教的code上看到<code>as.matix</code><br />
+不確定我的理解對不對??</p>
 </div>
 </div>
 
