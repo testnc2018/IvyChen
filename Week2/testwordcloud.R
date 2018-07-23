@@ -5,5 +5,7 @@ filename = paste0(id, ".txt")
 pttTestFunction(URL[1], filename[1])
 mapply(pttTestFunction, 
        URL = URL, filename = filename)
+#mapply代替for loop迴圈
+
 rm(list=ls(all.names = TRUE))
 par(family='Heiti TC Light')

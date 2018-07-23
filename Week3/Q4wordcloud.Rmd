@@ -1,0 +1,41 @@
+---
+title: "理解結巴以及TFIDF"
+author: "ivy chen"
+date: "2018/7/23"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+#前情提要
+##文字雲五步驟
+1. 收集文本  
+2. 安裝套件包  
+3. 前處理
+4. 建立詞頻向量 or 矩陣  
+5. 生成文字雲  
+
+## 問題1 用Corpus再轉一次是因為要使用 `tm_map`function`嗎?
+
+前處理中的 `lapply(filenames, readLines)`把每篇文章都變成一個list，list裡面每一行文字，都變成一個向量．
+透過Corpus funcation產生出list的list?(不確定是否能這樣理解?)第一層的list欄位包含content跟meta；第二層list為meta下包含七個list 例如 author...
+
+用Corpus再轉一次是因為要使用 `tm_map`function嗎?
+因為我查這function看起來是只能用在`corpora`上(但不確定這代表什麼)
+note:Interface to apply transformation functions (also denoted as mappings) to corpora.
+
+```{R 文本整理 }
+filenames <- list.files(getwd(), pattern="*.txt")
+files <- lapply(filenames, readLines)
+docs <- Corpus(VectorSource(files))
+```
+
+## 問題2 要畫結巴切詞要用corpora的格式；文字雲格式需要是df;要做TFIDF格式需要是matrix
+
+我在看助教的[code](https://ntu-csx-datascience.github.io/106Summer/week3/tfidf/tfidf.html) 有點吃力，我猜是我對於文本前處理的格式跟文字雲、TFIDF的資料格式沒有讀懂．我嘗試一個一個function看內容．
+
+我的理解是 要結巴切詞資料需要是corpora格式
+文字雲需要df,所以，在code上看到`as.data.fram`
+TFIDF吃matix，所以在助教的code上看到`as.matix` 

@@ -65,7 +65,7 @@ kable(head(freqFrame), format = "markdown")
 
 # 文字雲
 
-```{r}
+```{r,echo=FALSE}
 par(family='Heiti TC Light')
 wordcloud(freqFrame$Var1,freqFrame$Freq,
           scale=c(5,0.1),min.freq=50,max.words=150,
